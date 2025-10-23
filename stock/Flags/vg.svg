@@ -1,0 +1,40 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_3216)">
+<path d="M32 0C14.3269 0 0 14.3269 0 32C0 49.6731 14.3269 64 32 64C49.6731 64 64 49.6731 64 32C64 14.3269 49.6731 0 32 0Z" fill="#191977" style="fill:#191977;fill:color(display-p3 0.0980 0.0980 0.4667);fill-opacity:1;"/>
+<path d="M26.4614 0.487549C24.2186 0.879149 22.0564 1.50235 20 2.33505V4.79525L26.4614 0.487549Z" fill="#191977" style="fill:#191977;fill:color(display-p3 0.0980 0.0980 0.4667);fill-opacity:1;"/>
+<path d="M32.0001 18.1285V14.6667H26.8074L32.0001 18.1285Z" fill="#191977" style="fill:#191977;fill:color(display-p3 0.0980 0.0980 0.4667);fill-opacity:1;"/>
+<path d="M4.80737 21.3333H12.0001V16.5382L4.80737 21.3333Z" fill="#191977" style="fill:#191977;fill:color(display-p3 0.0980 0.0980 0.4667);fill-opacity:1;"/>
+<path d="M32.0001 6.66673V3.20483L26.8074 6.66673H32.0001Z" fill="#191977" style="fill:#191977;fill:color(display-p3 0.0980 0.0980 0.4667);fill-opacity:1;"/>
+<path d="M20 21.3333H27.1927L20 16.5382V21.3333Z" fill="#191977" style="fill:#191977;fill:color(display-p3 0.0980 0.0980 0.4667);fill-opacity:1;"/>
+<path d="M32 8.00004V6.66674H26.8073L32 3.20494V1.60254L24.4036 6.66674H20V6.39764L29.4284 0.111938C28.4256 0.191738 27.4362 0.317338 26.4614 0.487538L20 4.79524V2.33504C19.5501 2.51724 19.1061 2.70974 18.6667 2.91144V8.00004H32Z" fill="white" style="fill:white;fill-opacity:1;"/>
+<path d="M13.3333 6.01636C12.4708 6.63706 11.6404 7.29856 10.8453 8.00006H13.3333V6.01636Z" fill="white" style="fill:white;fill-opacity:1;"/>
+<path d="M18.6667 21.3333H20V16.5382L27.1927 21.3333H29.5964L20 14.9358V14.6667H24.4036L32 19.7309V18.1285L26.8073 14.6667H32V13.3333H18.6667V21.3333Z" fill="white" style="fill:white;fill-opacity:1;"/>
+<path d="M6.01639 13.3333C5.70239 13.7697 5.39949 14.2142 5.10739 14.6666C5.08599 14.6997 5.06479 14.733 5.04359 14.7662C4.50449 15.6076 4.00419 16.4754 3.54419 17.3682L7.59649 14.6667H12.0001V14.9358L2.40369 21.3333H4.80729L12 16.5381V21.3333H13.3333V13.3333H6.01639Z" fill="white" style="fill:white;fill-opacity:1;"/>
+<path d="M20 6.6667H24.4036L32 1.6025V0C31.1335 0 30.2777 0.0444 29.4284 0.1119L20 6.3975V6.6667Z" fill="#F0263C" style="fill:#F0263C;fill:color(display-p3 0.9412 0.1490 0.2353);fill-opacity:1;"/>
+<path d="M20 14.6667V14.9358L29.5964 21.3333H32V19.7309L24.4036 14.6667H20Z" fill="#F0263C" style="fill:#F0263C;fill:color(display-p3 0.9412 0.1490 0.2353);fill-opacity:1;"/>
+<path d="M12 14.9358V14.6667H7.59645L3.54415 17.3682C2.88725 18.6431 2.31165 19.9659 1.82825 21.3333H2.40375L12 14.9358Z" fill="#F0263C" style="fill:#F0263C;fill:color(display-p3 0.9412 0.1490 0.2353);fill-opacity:1;"/>
+<path d="M13.3334 21.3333H18.6667V13.3333H32V7.99998H18.6667V2.91138C16.7831 3.77628 14.9987 4.81778 13.3334 6.01628V7.99998H10.8454C9.04316 9.58978 7.42306 11.3787 6.01636 13.3333H13.3335L13.3334 21.3333Z" fill="#F0263C" style="fill:#F0263C;fill:color(display-p3 0.9412 0.1490 0.2353);fill-opacity:1;"/>
+<path d="M46.6642 45.3333C47.9975 45.3333 55.9975 43.26 55.9975 35.8934V21.3333H37.3308V35.8934C37.3308 43.26 45.3309 45.3333 46.6642 45.3333Z" fill="#1E5B00" style="fill:#1E5B00;fill:color(display-p3 0.1176 0.3569 0.0000);fill-opacity:1;"/>
+<path d="M43.9929 23.9716H40L41.3298 25.3049H42.6595L43.9929 23.9716Z" fill="#FFD400" style="fill:#FFD400;fill:color(display-p3 1.0000 0.8314 0.0000);fill-opacity:1;"/>
+<path d="M43.9929 26.6383H40L41.3298 27.9716H42.6595L43.9929 26.6383Z" fill="#FFD400" style="fill:#FFD400;fill:color(display-p3 1.0000 0.8314 0.0000);fill-opacity:1;"/>
+<path d="M43.9929 29.3048H40L41.3298 30.6382H42.6595L43.9929 29.3048Z" fill="#FFD400" style="fill:#FFD400;fill:color(display-p3 1.0000 0.8314 0.0000);fill-opacity:1;"/>
+<path d="M43.9929 34.6383H40L41.3298 35.9716H42.6595L43.9929 34.6383Z" fill="#FFD400" style="fill:#FFD400;fill:color(display-p3 1.0000 0.8314 0.0000);fill-opacity:1;"/>
+<path d="M43.9929 37.3048H40L41.3298 38.6382H42.6595L43.9929 37.3048Z" fill="#FFD400" style="fill:#FFD400;fill:color(display-p3 1.0000 0.8314 0.0000);fill-opacity:1;"/>
+<path d="M47.9982 22.6338H45.3226V25.3094H47.9982V22.6338Z" fill="#FFAD66" style="fill:#FFAD66;fill:color(display-p3 1.0000 0.6784 0.4000);fill-opacity:1;"/>
+<path d="M47.9982 22.6338H47.9928H45.3226V23.9671H46.6595V25.3004H47.9928L47.9982 22.6338Z" fill="#F0263C" style="fill:#F0263C;fill:color(display-p3 0.9412 0.1490 0.2353);fill-opacity:1;"/>
+<path d="M57.3334 41.3048H56L52 45.3048L46.6667 46.6382L41.3334 45.3048L37.3334 41.3048H36L34.6667 42.6382L36 43.9715H37.3334L41.3334 47.9715L46.6667 49.3048L52 47.9715L56 43.9715H57.3334L58.6667 42.6382L57.3334 41.3048Z" fill="#FFD400" style="fill:#FFD400;fill:color(display-p3 1.0000 0.8314 0.0000);fill-opacity:1;"/>
+<path d="M49.3307 41.3048L47.9974 25.3003H45.3307L43.9974 41.3048H49.3307Z" fill="white" style="fill:white;fill-opacity:1;"/>
+<path d="M53.3236 23.9716H49.3308L50.6605 25.3049H51.9903L53.3236 23.9716Z" fill="#FFD400" style="fill:#FFD400;fill:color(display-p3 1.0000 0.8314 0.0000);fill-opacity:1;"/>
+<path d="M53.3236 26.6383H49.3308L50.6605 27.9716H51.9903L53.3236 26.6383Z" fill="#FFD400" style="fill:#FFD400;fill:color(display-p3 1.0000 0.8314 0.0000);fill-opacity:1;"/>
+<path d="M53.3236 29.3048H49.3308L50.6605 30.6382H51.9903L53.3236 29.3048Z" fill="#FFD400" style="fill:#FFD400;fill:color(display-p3 1.0000 0.8314 0.0000);fill-opacity:1;"/>
+<path d="M53.3236 34.6383H49.3308L50.6605 35.9716H51.9903L53.3236 34.6383Z" fill="#FFD400" style="fill:#FFD400;fill:color(display-p3 1.0000 0.8314 0.0000);fill-opacity:1;"/>
+<path d="M53.3236 37.3048H49.3308L50.6605 38.6382H51.9903L53.3236 37.3048Z" fill="#FFD400" style="fill:#FFD400;fill:color(display-p3 1.0000 0.8314 0.0000);fill-opacity:1;"/>
+<path d="M53.3236 31.9716H49.3308L50.6605 33.3049H51.9903L53.3236 31.9716Z" fill="#FFD400" style="fill:#FFD400;fill:color(display-p3 1.0000 0.8314 0.0000);fill-opacity:1;"/>
+<path d="M45.3334 31.9716H41.3406L42.6703 33.3049H44.0001L45.3334 31.9716Z" fill="#FFD400" style="fill:#FFD400;fill:color(display-p3 1.0000 0.8314 0.0000);fill-opacity:1;"/>
+</g>
+<defs>
+<clipPath id="clip0_6_3216">
+<rect width="64" height="64" fill="white" style="fill:white;fill-opacity:1;"/>
+</clipPath>
+</defs>
+</svg>
