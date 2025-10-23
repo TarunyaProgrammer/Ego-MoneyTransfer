@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/TarunyaProgrammer/Ego-MoneyTransfer/main/stock/YOUR-LOGO.png" alt="Ego MoneyTransfer Logo" width="150"/>
+  <img src="/stock/logo-dark-minimal-removebg.png" alt="Ego MoneyTransfer Logo" width="150"/>
   <h1 align="center">💸 Ego-MoneyTransfer 💸</h1>
   
   <p align="center">
@@ -69,7 +69,7 @@
     <td width="50%" align="center">
       <strong>Desktop View</strong>
       <br><br>
-      <img src="https://raw.githubusercontent.com/TarunyaProgrammer/Ego-MoneyTransfer/main/stock/YOUR-SCREENSHOT-1.png" alt="Desktop Screenshot" width="90%">
+      <img src="/stock/desktop-view.png" alt="Desktop Screenshot" width="90%">
     </td>
     <td width="50%" align="center">
       <strong>Mobile View</strong>
@@ -95,7 +95,7 @@ This project is built 100% with the fundamentals of the web.
 
 Since this is a pure HTML/CSS/JS front-end project, getting started is as simple as it gets!
 
-<details>
+<details open>
   <summary>🚀 <strong>Option 1: Simple Download</strong></summary>
   
   1.  [Download the ZIP file](https://github.com/TarunyaProgrammer/Ego-MoneyTransfer/archive/refs/heads/main.zip) of this repository.
@@ -105,7 +105,7 @@ Since this is a pure HTML/CSS/JS front-end project, getting started is as simple
   And that's it! You're good to go.
 </details>
 
-<details>
+<details open>
   <summary>👨‍💻 <strong>Option 2: Clone for Developers (Recommended)</strong></summary>
   
   1.  **Clone the repository:**
