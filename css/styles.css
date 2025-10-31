@@ -107,6 +107,7 @@ hr {
 
 body {
   background-color: var(--color-background-screen);
+  overflow-x: hidden;
 }
 
 section {
@@ -218,12 +219,20 @@ section {
 
 /*& Hero Section */
 .hero {
-  width: 90%;
+  width: 100%;
   height: 90vh;
   margin: auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.05)
+    ),
+    url("/stock/herobg.jpg");
+  background-size: cover;
+  background-position: center;
 }
 .reviewicon {
   height: 1.25rem;
@@ -703,6 +712,47 @@ button.send:hover {
 .security-cta:hover {
   background-color: var(--color-sentiment-positive-active);
 }
-
+.security-cont-sec p u {
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+  text-decoration-color: var(--color-content-secondary);
+}
+.flags {
+  margin-top: 15rem;
+  margin-bottom: 15rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100vw;
+  background: magenta;
+  overflow: hidden;
+}
+.arrow,
+.flags img {
+  height: 8rem;
+}
+.flags img {
+  margin-right: 2rem;
+}
+.arrow {
+  height: 8rem;
+  width: 30%;
+  background: red;
+}
 /*& flags Section */
 /*& social Section */
+
+section.social {
+  background: magenta;
+  min-width: 100vw;
+  margin-left: 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social-content {
+  width: 300rem;
+}
+.social-card-cont {
+  display: flex;
+}
