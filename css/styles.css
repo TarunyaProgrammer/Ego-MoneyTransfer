@@ -74,6 +74,12 @@
   --hero-glow-blur: 28px;
   --hero-glow-blur-hover: 44px;
 }
+body::selection {
+  background-color: rgba(255, 68, 0, 0.765);
+}
+body {
+  cursor: url("/stock/cursor_image.png") 16 16, auto;
+}
 
 * {
   margin: 0;
@@ -82,6 +88,34 @@
   font-family: "Poppins", sans-serif;
   color: var(--color-content-primary);
 }
+
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle, #ffd700 20%, transparent 60%);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: screen;
+  filter: blur(10px) brightness(1.5);
+  transition: transform 0.05s ease-out;
+  z-index: 9999;
+}
+
+.cursor::after {
+  content: "★"; /* The star symbol */
+  position: absolute;
+  color: orangered;
+  font-size: 16px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 0 0 50px orangered, 0 0 60px orangered;
+}
+
 /* Width of scrollbar */
 ::-webkit-scrollbar {
   width: 22px;
@@ -743,16 +777,130 @@ button.send:hover {
 /*& social Section */
 
 section.social {
-  background: magenta;
   min-width: 100vw;
+  margin-top: 10rem;
   margin-left: 10vw;
+  height: 40rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .social-content {
   width: 300rem;
 }
+.social-content p img {
+  width: 1.5em;
+  border-radius: 50%;
+}
+.social-content h1 {
+  font-size: 4rem;
+  font-family: "Cal Sans";
+  text-transform: uppercase;
+}
+.social-content h5 {
+  font-weight: 200;
+}
+.social-slider-btn {
+  background: var(--color-interactive-primary-hover);
+  margin-right: 1rem;
+  margin-top: 3rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  cursor: pointer;
+}
+.social-slider-btn:hover {
+  transition: 0.5s ease;
+  background: var(--color-interactive-primary);
+}
+.disable-btn {
+  background: var(--color-background-neutral-active);
+  cursor: not-allowed;
+}
 .social-card-cont {
+  position: absolute;
+  top: 0;
+  left: 40rem;
   display: flex;
+}
+.social-card-alt {
+  background-color: var(--color-interactive-primary-active) !important;
+}
+.social-card {
+  background-color: rgb(255, 140, 0);
+  width: 30rem;
+  height: 40rem;
+  margin-right: 2rem;
+  padding: 2rem;
+  border-radius: 30px;
+  transition: 0.5s ease;
+}
+.social-card:hover {
+  box-shadow: rgba(240, 46, 46, 0.4) 5px 5px, rgba(240, 46, 46, 0.3) 10px 10px,
+    rgba(240, 46, 46, 0.2) 15px 15px, rgba(240, 46, 46, 0.1) 20px 20px,
+    rgba(240, 46, 46, 0.05) 25px 25px;
+}
+.social-card div img {
+  height: 5rem;
+  border-radius: 50%;
+}
+
+.social-card h4 {
+  margin-top: 3rem;
+  font-size: 2rem;
+}
+.social-card p {
+  margin-top: 3rem;
+  font-size: 1.3rem;
+}
+
+/*& bussiness Section */
+section.bussiness {
+  margin-top: 10rem;
+  width: 100vw;
+}
+.bussiness-cont {
+  background-color: var(--color-interactive-primary-active);
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  padding: 4rem;
+  border-radius: 40px;
+}
+
+.bussiness-cont h1 {
+  font-size: 4rem;
+  font-family: "Cal Sans";
+  text-transform: uppercase;
+  margin-top: 2rem;
+}
+.buss-icon {
+  background: var(--color-interactive-contrast);
+  display: inline-flex;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+.buss-cta {
+  display: inline-flex;
+  /* background: rgb(255, 140, 0); */
+  background: var(--color-interactive-contrast);
+  margin-top: 3rem;
+  padding: 1rem 3rem;
+  font-weight: 600;
+  border-radius: 50px;
+}
+
+/* & Banner section */
+section.banner {
+  margin-top: 15rem;
+  width: 100vw;
+  height: 30rem;
+  background: url("https://wise.com/imaginary-v2/images/aeb6be9304aad06c54138b4ab57a04fb-tapestry-background.webm");
 }

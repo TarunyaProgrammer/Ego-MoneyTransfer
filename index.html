@@ -340,7 +340,7 @@
       <img src="/stock/lock.webp" alt="" class="security-image" />
     </section>
 
-    <section class="flags">
+    <section style="display: none" class="flags">
       <div class="arrow">
         <div class="arrow-cont">
           <span
@@ -396,8 +396,8 @@
               aria-hidden="true"
               focusable="false"
               role="none"
-              width="16"
-              height="16"
+              width="32"
+              height="32"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
@@ -413,8 +413,8 @@
               aria-hidden="true"
               focusable="false"
               role="none"
-              width="16"
-              height="16"
+              width="32"
+              height="32"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
@@ -427,6 +427,7 @@
           </span>
         </div>
       </div>
+
       <div class="social-card-cont">
         <div class="social-card">
           <div><img src="/stock/google-play.webp" alt="" /></div>
@@ -437,7 +438,7 @@
           </h4>
           <p>Amir Fathi</p>
         </div>
-        <div class="social-card">
+        <div class="social-card social-card-alt">
           <div><img src="/stock/google-play.webp" alt="" /></div>
           <h4>
             "Thank you so much the best app for transferring money in the world.
@@ -455,7 +456,7 @@
           </h4>
           <p>Amir Fathi</p>
         </div>
-        <div class="social-card">
+        <div class="social-card social-card-alt">
           <div><img src="/stock/google-play.webp" alt="" /></div>
           <h4>
             "Thank you so much the best app for transferring money in the world.
@@ -475,7 +476,34 @@
         </div>
       </div>
     </section>
-    <section class="bussiness"></section>
+    <section class="bussiness">
+      <div class="bussiness-cont">
+        <div class="buss-icon">
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            role="none"
+            width="32"
+            height="32"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M9.01 3A1.01 1.01 0 0 0 8 4.01V7H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3V4.01A1.01 1.01 0 0 0 14.99 3zM14 7V5h-4v2zm-4 2h4v9h-4zM8 9H5v9h3zm8 9V9h3v9z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </div>
+        <h1>Get your business paid</h1>
+        <h5>
+          Receive more when you get paid from abroad. Pay less in fees than with
+          banks or PayPal,<br />
+          and help your business grow.
+        </h5>
+        <div class="buss-cta">Get started</div>
+      </div>
+    </section>
 
     <section class="banner"></section>
 
@@ -484,5 +512,15 @@
     <footer>
       <div class="container"></div>
     </footer>
+
+    <!-- &&& CURSOR MAKING -->
+    <div class="cursor"></div>
+    <script>
+      const cursor = document.querySelector(".cursor");
+      document.addEventListener("mousemove", (e) => {
+        cursor.style.top = e.clientY + "px";
+        cursor.style.left = e.clientX + "px";
+      });
+    </script>
   </body>
 </html>
