@@ -74,6 +74,56 @@
   --hero-glow-blur: 28px;
   --hero-glow-blur-hover: 44px;
 }
+/*& bg-audio */
+.play-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
+  box-shadow: 0 0 15px rgba(255, 90, 0, 0.5);
+  color: #ff5900;
+  font-size: 22px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10000;
+}
+
+/* Hover glow */
+.play-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(255, 90, 0, 0.8);
+  background: linear-gradient(145deg, #222, #333);
+}
+
+/* Pressed effect */
+.play-btn:active {
+  transform: scale(0.95);
+}
+
+/* Glowing pulse animation while playing */
+.playing {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 15px rgba(255, 90, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(255, 90, 0, 0.9);
+  }
+  100% {
+    box-shadow: 0 0 15px rgba(255, 90, 0, 0.5);
+  }
+}
+
 body::selection {
   background-color: rgba(255, 68, 0, 0.765);
 }

@@ -639,6 +639,57 @@
       </div>
     </footer>
 
+    <!-- &&& Background Audio -->
+    <!-- Audio -->
+    <audio id="bg-audio" src="/audio/bg-audio.mp3" preload="auto" loop></audio>
+
+    <!-- Button -->
+    <button id="play-btn" class="play-btn">
+      <i class="fa-solid fa-play"></i>
+    </button>
+    <script>
+      const audio = document.getElementById("bg-audio");
+      const btn = document.getElementById("play-btn");
+      const icon = btn.querySelector("i");
+
+      // Play/pause toggle for the button
+      btn.addEventListener("click", (event) => {
+        event.stopPropagation(); // stop from triggering document click
+        toggleAudio();
+      });
+
+      // When user clicks ANYWHERE in the document
+      let hasPlayed = false;
+      document.addEventListener("click", () => {
+        if (!hasPlayed) {
+          playAudio();
+          hasPlayed = true;
+        }
+      });
+
+      function toggleAudio() {
+        if (audio.paused) {
+          playAudio();
+        } else {
+          audio.pause();
+          icon.classList.replace("fa-pause", "fa-play");
+          btn.classList.remove("playing");
+        }
+      }
+
+      function playAudio() {
+        audio
+          .play()
+          .then(() => {
+            icon.classList.replace("fa-play", "fa-pause");
+            btn.classList.add("playing");
+          })
+          .catch((err) => {
+            console.warn("Playback blocked:", err);
+          });
+      }
+    </script>
+
     <!-- &&& CURSOR MAKING -->
     <div class="cursor"></div>
     <script>
