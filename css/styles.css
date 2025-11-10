@@ -271,22 +271,22 @@ section {
   background-position: center; */
 }
 #bgvideo {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   object-fit: cover;
   z-index: -2;
 }
 /* dark overlay */
 #overlay {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.755);
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
   z-index: -1;
 }
 .reviewicon {
@@ -795,6 +795,7 @@ button.send:hover {
   background: red;
 }
 /*& flags Section */
+
 /*& social Section */
 
 section.social {
@@ -847,6 +848,8 @@ section.social {
   top: 0;
   left: 40rem;
   display: flex;
+  overflow-x: hidden;
+  padding: 1rem 0;
 }
 .social-card-alt {
   background-color: var(--color-interactive-primary-active) !important;
@@ -922,6 +925,282 @@ section.bussiness {
 section.banner {
   margin-top: 15rem;
   width: 100vw;
-  height: 30rem;
+  height: 50vw;
   background: url("https://wise.com/imaginary-v2/images/aeb6be9304aad06c54138b4ab57a04fb-tapestry-background.webm");
+  overflow: hidden;
+  position: relative;
+}
+#banner-video {
+  width: 100%;
+}
+.banner-content {
+  color: black;
+  position: absolute;
+  background: #fff;
+  top: 15%;
+  bottom: 15%;
+  left: 10vw;
+  width: 80vw;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.banner-getapp {
+  color: black;
+}
+#banner-apple,
+#banner-google {
+  color: black;
+}
+#banner-google b {
+  color: black;
+}
+#banner-apple b {
+  color: black;
+}
+.banner-head {
+  font-size: 5rem;
+  font-family: "Cal Sans";
+  text-transform: uppercase;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  line-height: 4rem;
+}
+.banner-getapp-2 {
+  width: 17rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* & Footer */
+.footer {
+  background-color: #080808;
+  color: #333;
+  font-family: "Inter", sans-serif;
+  padding: 10rem 10%;
+  font-size: 14px;
+}
+
+/* Columns Layout */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+/* Column Headings */
+.footer-col h4 {
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #e9e9e9;
+}
+
+/* Links */
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.footer-col ul li a {
+  color: #d2d2d2;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #ffffff;
+}
+
+/* Social Icons */
+.social-links a {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 18px;
+  color: #333;
+  transition: color 0.2s ease;
+}
+
+.social-links a:hover {
+  color: #007bff;
+}
+
+/* Divider Line */
+.footer hr {
+  border: none;
+  border-top: 1px solid #2a2a2a;
+  margin: 30px 0;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-logo img {
+  height: 70px;
+}
+
+.footer-links a {
+  display: inline-block;
+  color: #989898;
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+.footer-links a:hover {
+  color: #000;
+}
+
+/* Copyright Section */
+.footer-copy {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* ✨ ANIMATION ENHANCEMENTS */
+
+/* Smooth fade-up for footer appearance */
+.footer {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: footerFadeUp 1s ease-out forwards;
+}
+
+@keyframes footerFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🌟 Underline glow animation for links */
+.footer-col ul li a {
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-col ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background: linear-gradient(90deg, #ff5900, #ff8c00);
+  transition: width 0.3s ease;
+}
+
+.footer-col ul li a:hover::after {
+  width: 100%;
+}
+
+/* 🔮 Subtle color glow when hovering links */
+.footer-col ul li a:hover {
+  color: #fff;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
+}
+
+/* 🪄 Social icon hover pop */
+.social-links a {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #ff5900;
+  transform: scale(1.3) rotate(8deg);
+  text-shadow: 0 0 10px #ff5900, 0 0 20px #00ffee;
+}
+
+/* Divider line glowing pulse */
+#hr {
+  position: relative;
+  overflow: hidden;
+  border: none;
+  height: 1px;
+  background: #2a2a2a;
+  margin: 30px 0;
+  width: 100%;
+}
+
+#hr::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100vw;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #ff5900, transparent);
+  animation: glowLine 2s linear infinite;
+  opacity: 0.9;
+}
+
+@keyframes glowLine {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+/* 🧊 Footer logo subtle hover float */
+.footer-logo img {
+  transition: transform 0.4s ease, filter 0.3s ease;
+}
+
+.footer-logo img:hover {
+  transform: translateY(-5px) scale(1.05);
+  filter: brightness(1.5);
+}
+
+/* ⚙️ Footer links hover underline */
+.footer-links a {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.footer-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background: #ff5900;
+  transition: width 0.3s ease;
+}
+
+.footer-links a:hover::after {
+  width: 100%;
+}
+
+.footer-links a:hover {
+  color: #fff;
 }
