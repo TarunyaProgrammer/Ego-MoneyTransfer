@@ -250,6 +250,8 @@ section {
   margin-right: 0.6em;
 }
 .tabs {
+  text-decoration: none;
+  color: white;
   transition: 0.1s;
   cursor: pointer;
   font-weight: 500;
