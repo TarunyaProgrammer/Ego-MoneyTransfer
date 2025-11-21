@@ -353,6 +353,18 @@ section {
   /* background: magenta; */
   width: 40%;
 }
+.hero-image {
+  width: 40%;
+  height: auto;
+  border-radius: 1.5rem;
+  object-fit: cover;
+  box-shadow: 6px 6px 18px 4px rgba(255, 255, 255, 0.1),
+    -6px -6px 18px 4px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+.hero-image:hover {
+  transform: scale(1.05);
+}
 .hero-content-main h1 {
   font-family: "Cal Sans";
   text-transform: uppercase;
@@ -1255,4 +1267,26 @@ section.banner {
 
 .footer-links a:hover {
   color: #fff;
+}
+
+/* Additional styles for business and platform pages */
+.bussiness-cont h5 {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+.transfer-content h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--color-content-secondary);
+  margin-top: 0.5rem;
+}
+
+.security-content h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--color-content-secondary);
+  margin-top: 0.5rem;
 }

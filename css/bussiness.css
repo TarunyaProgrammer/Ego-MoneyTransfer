@@ -1,0 +1,304 @@
+@import url("https://fonts.googleapis.com/css2?family=Cal+Sans&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Root color variables - Dark Theme (Red–Orange Edition) */
+:root {
+  /* Base Backgrounds */
+  --color-background-screen: #121212;
+  --color-background-elevated: #1b1b1b;
+  --color-background-overlay: rgba(0, 0, 0, 0.7);
+  --color-background-neutral: #1e1e1e;
+  --color-background-neutral-hover: #252525;
+  --color-background-neutral-active: #2d2d2d;
+
+  /* Core Text Colors */
+  --color-content-primary: #ffffff;
+  --color-content-secondary: #c9c3bf;
+  --color-content-tertiary: #a09b97;
+
+  /* Accent and Brand Colors (Red–Orange Core) */
+  --color-interactive-primary: #ff5722;
+  --color-interactive-primary-hover: #ff7043;
+  --color-interactive-primary-active: #e64a19;
+
+  --color-interactive-accent: #ff7043;
+  --color-interactive-accent-hover: #ff8a50;
+  --color-interactive-accent-active: #ff9e80;
+
+  /* Links */
+  --color-content-link: #ff7043;
+  --color-content-link-hover: #ff8a50;
+  --color-content-link-active: #ff9e80;
+
+  /* Secondary Buttons / Controls */
+  --color-interactive-secondary: #333333;
+  --color-interactive-secondary-hover: #444444;
+  --color-interactive-secondary-active: #555555;
+
+  /* Contrast and Highlights */
+  --color-interactive-contrast: #ff7043;
+  --color-interactive-contrast-hover: #ffa270;
+  --color-interactive-contrast-active: #ffc4a3;
+
+  /* Neutral / Borders */
+  --color-border-neutral: rgba(255, 255, 255, 0.1);
+  --color-border-overlay: rgba(255, 255, 255, 0.15);
+
+  /* Sentiments */
+  --color-sentiment-negative: #ff5252;
+  --color-sentiment-negative-hover: #ff4444;
+  --color-sentiment-negative-active: #e53935;
+  --color-sentiment-positive: #ff8b3d;
+  --color-sentiment-positive-hover: #ff7043;
+  --color-sentiment-positive-active: #ff5722;
+  --color-sentiment-warning: #ffc107;
+  --color-sentiment-warning-hover: #ffb300;
+  --color-sentiment-warning-active: #ffa000;
+
+  /* Gradients (for hero / buttons / highlights) */
+  --gradient-primary: linear-gradient(135deg, #ff7043 0%, #d84315 100%);
+  --gradient-accent: linear-gradient(135deg, #ff5722 0%, #ff8a50 100%);
+  --gradient-bg: linear-gradient(180deg, #1b1b1b 0%, #121212 100%);
+
+  /* Light & Dark Contrast */
+  --color-light: #ffffff;
+  --color-dark: #0a0a0a;
+  --color-contrast: #ffffff;
+  --color-contrast-overlay: #1b1b1b;
+  --color-contrast-theme: #ff7043;
+
+  --hero-glow-size: 240%;
+  --hero-glow-scale: 0.9;
+  --hero-glow-scale-hover: 1.25;
+  --hero-glow-opacity: 0.45;
+  --hero-glow-opacity-hover: 0.85;
+  --hero-glow-blur: 28px;
+  --hero-glow-blur-hover: 44px;
+}
+/*& bg-audio */
+.play-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
+  box-shadow: 0 0 15px rgba(255, 90, 0, 0.5);
+  color: #ff5900;
+  font-size: 22px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10000;
+}
+
+/* Hover glow */
+.play-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(255, 90, 0, 0.8);
+  background: linear-gradient(145deg, #222, #333);
+}
+
+/* Pressed effect */
+.play-btn:active {
+  transform: scale(0.95);
+}
+
+/* Glowing pulse animation while playing */
+.playing {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 15px rgba(255, 90, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(255, 90, 0, 0.9);
+  }
+  100% {
+    box-shadow: 0 0 15px rgba(255, 90, 0, 0.5);
+  }
+}
+
+body::selection {
+  background-color: rgba(255, 68, 0, 0.765);
+}
+body {
+  cursor: url("/stock/cursor_image.png") 16 16, auto;
+}
+
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  color: var(--color-content-primary);
+}
+
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle, #ffd700 20%, transparent 60%);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: screen;
+  filter: blur(10px) brightness(1.5);
+  transition: transform 0.05s ease-out;
+  z-index: 9999;
+}
+
+.cursor::after {
+  content: "★"; /* The star symbol */
+  position: absolute;
+  color: orangered;
+  font-size: 16px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 0 0 50px orangered, 0 0 60px orangered;
+}
+
+/* Width of scrollbar */
+::-webkit-scrollbar {
+  width: 22px;
+}
+
+/* Track (background of scrollbar) */
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Thumb (the draggable part of scrollbar) */
+::-webkit-scrollbar-thumb {
+  background-image: url("/stock/scroll.png");
+  background-repeat: no-repeat;
+  background-size: 22px;
+}
+
+hr {
+  color: var(--color-content-primary);
+  width: 80%;
+  margin: auto;
+}
+
+body {
+  background-color: var(--color-background-screen);
+  overflow-x: hidden;
+}
+
+section {
+  width: 80%;
+  margin: auto;
+}
+
+/*& NAV-Bar */
+#navbar {
+  position: sticky; /* stays in flow but becomes fixed when top reached */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5em; /* ⬅️ Move height here */
+  display: flex; /* ⬅️ Make nav itself a flex container */
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(12px); /* Blur the background */
+  -webkit-backdrop-filter: blur(12px); /* Safari support */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 999;
+  transition: transform 0.3s ease-in-out; /* Smooth slide */
+}
+
+/* When "hide" class is added, move navbar up out of view */
+#navbar.hide {
+  transform: translateY(-100%);
+}
+
+.nav {
+  width: 80%;
+  margin: 0 auto; /* center within the sticky navbar */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo img {
+  height: 3em;
+}
+
+.nav-left {
+  width: 40%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.nav-right {
+  width: 25%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.lang img {
+  width: 1.5em;
+  margin-right: 0.6em;
+}
+.tabs {
+  text-decoration: none;
+  color: white;
+  transition: 0.1s;
+  cursor: pointer;
+  font-weight: 500;
+}
+.tabs:hover {
+  border-radius: 20px;
+  padding: 7px 10px;
+  background-color: var(--color-content-link-hover);
+  color: var(--color-content-primary);
+}
+
+#sign-up {
+  border-radius: 20px;
+  padding: 7px 10px;
+  background-color: var(--color-sentiment-positive);
+  transition: 0.25s;
+}
+#sign-up:hover {
+  background: var(--color-sentiment-positive-hover);
+}
+
+.nav-above {
+  position: absolute;
+  top: 5em;
+}
+.nav-personal,
+.nav-bussiness,
+.nav-platform {
+  display: none;
+  z-index: 10;
+}
+.nav-above:has(~ nav #tabs-personal:hover) .nav-personal {
+  display: flex;
+  z-index: 10;
+}
+
+.blur-overlay {
+  position: fixed;
+  top: 5em;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 1;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 4;
+}
