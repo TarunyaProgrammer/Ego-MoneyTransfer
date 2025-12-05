@@ -135,9 +135,9 @@
     <nav id="navbar">
       <div class="nav">
         <div class="nav-left">
-          <span class="logo"
+          <a href="/index.html" class="logo"
             ><img src="/stock/logo-dark-minimal-removebg.png"
-          /></span>
+          /></a>
           <a class="tabs" href="/index.html" id="tabs-personal">Personal</a>
           <a class="tabs" href="/pages/bussiness.html" id="tabs-bussiness"
             >Bussiness</a
@@ -191,63 +191,57 @@
       <div class="hero-card">
         <div class="transfer-card">
           <div class="exchange-rate">
-            <i class="fa-solid fa-lock"></i> Rate guaranteed (66h)
+            <i class="fa-solid fa-chart-line"></i> Live Exchange Rates
             <br />
-            <span class="rate-pill">1 USD = 87.9562 INR</span>
+            <span class="rate-pill" id="live-rate">Loading rate...</span>
           </div>
 
-          <label class="field-label">You send exactly</label>
+          <label class="field-label">Amount</label>
           <div class="input-box">
-            <input type="number" value="80000" />
+            <input type="number" id="amount-input" value="1000" />
             <div class="currency">
-              <img src="/stock/Flags/in.svg" alt="INR" />
-              <span>INR</span>
-              <i class="fa-solid fa-chevron-down"></i>
+              <!-- Simple Select for MVP, styled later if needed -->
+              <select id="from-currency" style="border: none; background: transparent; color: white; font-weight: bold; outline: none; cursor: pointer;">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="INR">INR</option>
+                <option value="GBP">GBP</option>
+                <option value="CAD">CAD</option>
+                <option value="AUD">AUD</option>
+                <option value="JPY">JPY</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="text-align: center; margin: 1rem 0;">
+            <button id="swap-btn" style="background: rgba(255,255,255,0.1); border: none; color: white; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; transition: 0.3s;">
+              <i class="fa-solid fa-arrow-right-arrow-left" style="transform: rotate(90deg);"></i>
+            </button>
+          </div>
+
+          <label class="field-label">Converted Amount</label>
+          <div class="input-box">
+            <input type="text" id="result-input" value="..." readonly />
+            <div class="currency">
+               <select id="to-currency" style="border: none; background: transparent; color: white; font-weight: bold; outline: none; cursor: pointer;">
+                <option value="INR">INR</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+                <option value="CAD">CAD</option>
+                <option value="AUD">AUD</option>
+                <option value="JPY">JPY</option>
+              </select>
             </div>
           </div>
 
           <div class="info-note">
-            <i class="fa-solid fa-link"></i>
-            Sending over 25,000 USD or equivalent?
-            <a href="#">We'll discount our fee</a>
+            <i class="fa-solid fa-circle-info"></i>
+            Mid-market exchange rate at <span id="last-updated">...</span>
           </div>
-
-          <label class="field-label">Recipient gets</label>
-          <div class="input-box">
-            <input type="number" value="890.01" />
-            <div class="currency">
-              <img src="/stock/Flags/us.svg" alt="USD" />
-              <span>USD</span>
-              <i class="fa-solid fa-chevron-down"></i>
-            </div>
-          </div>
-
-          <label class="field-label">Paying with</label>
-          <div class="payment-box">
-            <div class="left">
-              <i class="fa-solid fa-building-columns"></i>
-              <span>Bank transfer</span>
-            </div>
-            <button class="change-btn">
-              Change <i class="fa-solid fa-chevron-right"></i>
-            </button>
-          </div>
-
-          <div class="fees-summary">
-            <p><span>Bank transfer fee</span><span>0 INR</span></p>
-            <p><span>Our fee</span><span>1,337 INR</span></p>
-            <p><span>GST</span><span>381.57 INR</span></p>
-            <hr />
-            <p class="total">
-              <span>Total included fees (2.15%)</span><span>1,718.57 INR</span>
-            </p>
-          </div>
-
-          <div class="arrival">Should arrive <b>by Wednesday</b></div>
 
           <div class="action-buttons">
-            <button class="compare">Compare fees</button>
-            <button class="send">Send money</button>
+            <button class="send" id="convert-btn" style="width: 100%;">Convert Now</button>
           </div>
         </div>
       </div>
