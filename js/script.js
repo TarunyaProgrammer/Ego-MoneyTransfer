@@ -34,7 +34,7 @@
   );
 })();
 
-// ^ SOCIAL SLIDER
+// ^ Social Slider
 (function () {
   const container = document.querySelector(".social-card-cont");
   const btns = document.querySelectorAll(".social-slider-btn");
@@ -42,20 +42,15 @@
 
   if (!container || !leftBtn || !rightBtn) return;
 
-  // Scroll amount (approx width of a card + gap)
   const SCROLL_AMOUNT = 400;
 
-  // Update button states
   const updateButtons = () => {
-    // Left button
     if (container.scrollLeft <= 0) {
       leftBtn.classList.add("disable-btn");
     } else {
       leftBtn.classList.remove("disable-btn");
     }
 
-    // Right button
-    // Allow a small buffer (1px) for calculation errors
     if (
       container.scrollLeft + container.clientWidth >=
       container.scrollWidth - 1
@@ -66,10 +61,8 @@
     }
   };
 
-  // Initial check
   updateButtons();
 
-  // Scroll listeners
   leftBtn.addEventListener("click", () => {
     container.scrollBy({ left: -SCROLL_AMOUNT, behavior: "smooth" });
   });
@@ -78,13 +71,12 @@
     container.scrollBy({ left: SCROLL_AMOUNT, behavior: "smooth" });
   });
 
-  // Update buttons on scroll end
   container.addEventListener("scroll", () => {
     updateButtons();
   });
 })();
 
-// ^ CURRENCY CONVERTER
+// ^ Exchange Rate
 (function () {
   const amountInput = document.getElementById("amount-input");
   const fromSelect = document.getElementById("from-currency");
@@ -99,7 +91,6 @@
 
   let rates = {};
 
-  // Fetch rates
   const fetchRates = async () => {
     try {
       const res = await fetch("https://open.er-api.com/v6/latest/USD");
@@ -110,16 +101,15 @@
           data.time_last_update_utc
         ).toLocaleTimeString();
       }
-      convert(); // Convert immediately after fetching
+      convert();
     } catch (err) {
       console.error("Failed to fetch rates:", err);
       if (liveRateEl) liveRateEl.textContent = "Error loading rates";
     }
   };
 
-  // Conversion logic
   const convert = () => {
-    if (!rates.USD) return; // Rates not loaded yet
+    if (!rates.USD) return;
 
     const amount = parseFloat(amountInput.value);
     const from = fromSelect.value;
@@ -130,8 +120,6 @@
       return;
     }
 
-    // Base is USD
-    // Formula: (Amount / RateFrom) * RateTo
     const rateFrom = rates[from];
     const rateTo = rates[to];
 
@@ -147,15 +135,12 @@
     }
   };
 
-  // Event Listeners
   if (convertBtn) convertBtn.addEventListener("click", convert);
-  
-  // Real-time updates
+
   amountInput.addEventListener("input", convert);
   fromSelect.addEventListener("change", convert);
   toSelect.addEventListener("change", convert);
 
-  // Swap
   if (swapBtn) {
     swapBtn.addEventListener("click", () => {
       const temp = fromSelect.value;
@@ -165,6 +150,5 @@
     });
   }
 
-  // Init
   fetchRates();
 })();
